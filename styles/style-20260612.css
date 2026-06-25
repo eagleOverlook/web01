@@ -7,7 +7,7 @@
 /*混合參數*/
 /*視窗背景色設定*/
 body {
-  background: #fbf9cc url(../images/bg.png) repeat-x;
+  background: white url(../images/bg.png) repeat-x;
 }
 body header {
   text-align: center;
