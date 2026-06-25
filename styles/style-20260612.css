@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Pixelify Sans;
+  src: url(./PixelifySans-VariableFont_wght.ttf);
+}
+/* 變數 */
+/*混合參數*/
+/*視窗背景色設定*/
+body {
+  background: #fbf9cc url(../images/bg.png) repeat-x;
+}
+body header {
+  text-align: center;
+}
+body header h1 {
+  color: white;
+  width: 300px;
+  border: 5px solid #f5e6c8;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: 40px auto;
+  /* 圓角框線 border-radius */
+  border-radius: 50%;
+  font-size: 300%;
+  line-height: 1em;
+  font-family: Pixelify Sans, sans-serif;
+  /* 文字陰影 text-shadow: 水平位移距離 垂直位移距離 模糊長度 顏色 */
+  text-shadow: 0 0 5px black;
+  /* 區塊陰影 box-shadow: */
+  box-shadow: 0 0 10px black;
+  background: linear-gradient(to bottom, #f5e6c8, #c8873a);
+  opacity: 0.8;
+  /*透明度*/
+}
+body nav {
+  text-align: center;
+}
+body nav ul.menu {
+  margin-left: -2.5em;
+}
+body nav ul.menu li {
+  list-style-type: none;
+  display: inline-block;
+  width: 200px;
+  margin: 0 10px;
+}
+body nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  background-color: #c8873a;
+  padding: 10px;
+  display: block;
+  border-radius: 10px;
+}
+body .content {
+  background-color: white;
+  width: 960px;
+  border: 1px solid #f7c7a3;
+  margin: 30px auto;
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+body .content h2 {
+  color: #76bd9b;
+  border: 1px dotted #76bd9b;
+  border-left: 10px solid #d0e95b;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+body .content h3 {
+  color: #ff705e;
+  background-color: #fbf9cc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px #eeb3aa inset;
+}
+body .content .imgL {
+  float: left;
+  margin-right: 20px;
+}
+body .content .imgR {
+  float: right;
+  margin-left: 20px;
+}
+body .content .imgRad {
+  border-radius: 50%;
+  border: 1px solid black;
+}
+body .content .clear {
+  clear: both;
+}
+body .content .clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+body .content .more {
+  text-align: right;
+}
+body .content .more::after {
+  content: url(../images/ico_arrow.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+body .content > section + section {
+  margin-top: 80px;
+}
+body .content table {
+  width: 100%;
+  border: 2px solid #f7c7a3;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+}
+body .content table caption {
+  margin-bottom: 15px;
+}
+body .content table th {
+  border: 1px solid #f7c7a3;
+  padding: 10px 20px;
+  background-color: #ffeeee;
+  text-align: left;
+  width: 10em;
+}
+body .content table td {
+  border: 1px solid #f7c7a3;
+  padding: 10px 20px;
+}
+body .content table input[type=text],
+body .content table input[type=tel],
+body .content table input[type=email],
+body .content table textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+body .content table input[type=text]:focus,
+body .content table input[type=tel]:focus,
+body .content table input[type=email]:focus,
+body .content table textarea:focus {
+  background-color: #f5e6c8;
+  border: 1px solid #f5e6c8;
+  border-radius: 10px;
+  outline: none;
+}
+body .content .btns {
+  text-align: center;
+}
+body .content .btns input {
+  width: 150px;
+  background-color: #fff;
+  border: 2px solid #f7c7a3;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1em;
+  margin: 0 10px;
+}
+body .content .btns input:hover {
+  background-color: #fbf9cc;
+}
+body a {
+  color: red;
+}
+body a[href^="mailto://"]::after {
+  content: url(../images/ico_mail.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+body a[href*=tcnr]::after {
+  content: url(../images/ico_blank.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+body footer {
+  text-align: center;
+}/*# sourceMappingURL=style-20260612.css.map */

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yozi's Web</title>
+
+    <link rel="stylesheet" href="./styles/style-20260612.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Yozi's Web</h1>
+            <p>蛋糕訂購表單</p>
+        </header>
+
+
+        <div class="content">
+            <form>
+                <table>
+                    <caption>訂購人資料</caption>
+                    <tr>
+                        <th>姓名*</th>
+                        <td>
+                            <input type="text" name="text" placeholder="請輸入姓名" required autofocus>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>電話*</th>
+                        <td>
+                            <input type="tel" name="tel" placeholder="0987654321" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>電子郵件*</th>
+                        <td>
+                            <input type="email" name="email" placeholder="123456@gmail.com" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>取貨時間*</th>
+                        <td>
+                            <input type="date" name="date" required>
+                            <input type="time" name="time" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>取貨方式*</th>
+                        <td>
+                            <input type="radio" name="delivery" value="pickup">店面自取
+                            <input type="radio" name="delivery" value="shipping">低溫宅配
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="1">
+                    <caption>蛋糕資訊</caption>
+                    <tr>
+                        <th>蛋糕口味*</th>
+                        <td>
+                            <select name="cake" required>
+                                <option value="chocolate">巧克力</option>
+                                <option value="vanilla">香草</option>
+                                <option value="coffee">咖啡</option>
+                                <option value="cheese">起司</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>數量*</th>
+                        <td>
+                            <input type="number" name="quantity" min="1" max="10" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>尺寸*</th>
+                        <td>
+                            <select name="size" required>
+                                <option value="6inch">6英吋圓形(6~8人份)(X元)</option>
+                                <option value="10inch">10英吋圓形(10~12人份)(X元)</option>
+                                <option value="12inch">12英吋圓形(14~18人份)(X元)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>客製化要求</th>
+                        <td>
+                            <textarea name="customized" id="customized" cols="30" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>是否需要餐具</th>
+                        <td>
+                            <input type="radio" name="fork" value="need">需要
+                            <input type="radio" name="fork" value="noneed">不需要
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="btns">
+                    <input type="reset" value="清除重填">
+                    <input type="submit" value="送出">
+
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <p><small>Copyright © Yozi's Web All Rights Reserved</small></p>
+        </footer>
+    </main>
+</body>
+
+</html>

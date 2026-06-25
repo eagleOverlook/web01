@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Pixelify Sans;
+    src: url(./PixelifySans-VariableFont_wght.ttf);
+}
+
+/* 變數 */
+
+$color-primary: #c8873a; // 導覽按鈕、h1漸層
+$color-border: #f7c7a3; // 表格、.content邊框
+$color-bg: #f5e6c8; // h1邊框 focus背景
+$body-bg: #fbf9cc; //body、h3背景
+$h2-color: #76bd9b;
+
+/*混合參數*/
+@mixin input-focus {
+    background-color: $color-bg;
+    border: 1px solid $color-bg;
+    border-radius: 10px;
+    outline: none;
+}
+
+/*視窗背景色設定*/
+body {
+    background: $body-bg url(../images/bg.png) repeat-x;
+
+    header {
+        text-align: center;
+
+        h1 {
+            color: white;
+            width: 300px;
+            border: 5px solid $color-bg;
+            padding: 30px;
+            box-sizing: border-box;
+            margin: 40px auto;
+
+            /* 圓角框線 border-radius */
+            border-radius: 50%;
+            font-size: 300%;
+            line-height: 1em;
+            font-family:
+                Pixelify Sans,
+                sans-serif;
+
+            /* 文字陰影 text-shadow: 水平位移距離 垂直位移距離 模糊長度 顏色 */
+            text-shadow: 0 0 5px black;
+
+            /* 區塊陰影 box-shadow: */
+            box-shadow: 0 0 10px black;
+            background: linear-gradient(to bottom, $color-bg, $color-primary);
+            opacity: 0.8;
+            /*透明度*/
+        }
+    }
+
+    nav {
+        text-align: center;
+
+        ul.menu {
+            margin-left: -2.5em;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                width: 200px;
+                margin: 0 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    background-color: $color-primary;
+                    padding: 10px;
+                    display: block;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .content {
+        background-color: white;
+        width: 960px;
+        border: 1px solid $color-border;
+        margin: 30px auto;
+        padding: 40px 80px;
+        box-sizing: border-box;
+
+        h2 {
+            color: $h2-color;
+            border: 1px dotted $h2-color;
+            border-left: 10px solid #d0e95b;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: #ff705e;
+            background-color: $body-bg;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px #eeb3aa inset;
+        }
+
+        .imgL {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .imgR {
+            float: right;
+            margin-left: 20px;
+        }
+
+        .imgRad {
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .clearfix {
+            &::after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+        }
+
+        .more {
+            text-align: right;
+
+            &::after {
+                content: url(../images/ico_arrow.png);
+                margin-left: 5px;
+                vertical-align: middle;
+            }
+        }
+
+        &>section+section {
+            margin-top: 80px;
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid $color-border;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+
+            caption {
+                margin-bottom: 15px;
+            }
+
+            th {
+                border: 1px solid $color-border;
+                padding: 10px 20px;
+
+                background-color: #ffeeee;
+                text-align: left;
+                width: 10em;
+            }
+
+            td {
+                border: 1px solid $color-border;
+                padding: 10px 20px;
+            }
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            textarea {
+                border: 1px solid #ccc;
+                padding: 10px;
+                font-size: 1em;
+                width: 100%;
+                box-sizing: border-box;
+
+                &:focus {
+                    @include input-focus();
+
+                }
+
+            }
+        }
+
+        .btns {
+            text-align: center;
+
+            input {
+                width: 150px;
+                background-color: #fff;
+                border: 2px solid $color-border;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 1em;
+                margin: 0 10px;
+
+                &:hover {
+                    background-color: $body-bg;
+                }
+            }
+        }
+
+
+    }
+
+    a {
+        color: red;
+    }
+
+    a[href^="mailto://"]::after {
+        content: url(../images/ico_mail.png);
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+
+    a[href*="tcnr"]::after {
+        content: url(../images/ico_blank.png);
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+
+}

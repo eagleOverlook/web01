@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麵包介紹 | Yozi's Web</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* ===== bread.html 專用樣式 ===== */
+
+        /* 麵包詳細介紹區塊 */
+        .bread-detail {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 左右交替排列（偶數區塊圖片在右） */
+        .bread-detail:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* 最後一個不需要底線 */
+        .bread-detail:last-child {
+            border-bottom: none;
+        }
+
+        /* 圖片區塊 */
+        .bread-detail .bread-img {
+            width: 280px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .bread-detail .bread-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 文字區塊 */
+        .bread-detail .bread-info {
+            flex: 1;
+        }
+
+        .bread-detail .bread-info h2 {
+            margin-top: 0;
+            color: #8b5e3c;
+        }
+
+        /* 標籤（例如：特色、保存方式） */
+        .bread-info .tag {
+            display: inline-block;
+            background-color: #f5e6c8;
+            color: #8b5e3c;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 6px;
+            margin-bottom: 10px;
+        }
+
+        /* 規格表 */
+        .bread-spec {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .bread-spec th,
+        .bread-spec td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        .bread-spec th {
+            background-color: #f5e6c8;
+            width: 100px;
+        }
+
+        /* 返回按鈕 */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 8px 20px;
+            background-color: #fff;
+            border: 2px solid #f7c7a3;
+            border-radius: 20px;
+            color: #8b5e3c;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .back-btn:hover {
+            background-color: #f5e6c8;
+        }
+
+        /* 頁面標題區 */
+        .page-title {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid #f7c7a3;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== HEADER（與 index 相同） ===== -->
+    <header>
+        <h1>Yozi's Web</h1>
+        <p>介紹一下我們的麵包種類！</p>
+    </header>
+
+    <!-- ===== NAV（與 index 相同） ===== -->
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">關於本站</a></li>
+            <li><a href="index.html#bread-types">麵包種類</a></li>
+            <li><a href="index.html#profile">烘焙師介紹</a></li>
+            <li><a href="booking.html">立即預定</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+        <div class="content">
+
+            <!-- 返回首頁按鈕 -->
+            <a href="index.html" class="back-btn">← 返回首頁</a>
+
+            <!-- 頁面標題 -->
+            <div class="page-title">
+                <h2>麵包種類詳細介紹</h2>
+                <p>精選三款手工製作，帶給你最純粹的烘焙滋味</p>
+            </div>
+
+            <!-- ===== 麵包 1：歐式麵包 ===== -->
+            <div class="bread-detail" id="detail-european">
+                <div class="bread-img">
+                    <img src="./images/歐式麵包.jpg" alt="歐式麵包">
+                </div>
+                <div class="bread-info">
+                    <h2>● 歐式麵包</h2>
+                    <span class="tag">低糖</span>
+                    <span class="tag">低油</span>
+                    <span class="tag">健康首選</span>
+                    <p>
+                        歐式麵包是一種源自歐洲、以主食為定位的麵包，
+                        通常特點是低糖、低油、少蛋或無蛋，適合健康飲食的人食用。
+                        外皮酥脆、內裡Q彈，是正餐的好搭檔。
+                    </p>
+                    <p>
+                        <!-- TODO：可補充更多內容，例如：製作過程、適合搭配的食物等 -->
+                        製作過程採用長時間低溫發酵，讓麵包風味更加豐富層次。
+                    </p>
+                    <table class="bread-spec">
+                        <tr>
+                            <th>口感</th>
+                            <td>外酥內Q</td>
+                        </tr>
+                        <tr>
+                            <th>保存方式</th>
+                            <td>常溫 2 天 / 冷凍 7 天</td>
+                        </tr>
+                        <tr>
+                            <th>建議食用</th>
+                            <td>回烤 5 分鐘風味最佳</td>
+                        </tr>
+                        <tr>
+                            <th>價格</th>
+                            <td><!-- TODO：填入價格 --></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== 麵包 2：蘇打餅牛軋糖 ===== -->
+            <div class="bread-detail" id="detail-nougat">
+                <div class="bread-img">
+                    <img src="./images/牛軋糖.jpg" alt="蘇打餅牛軋糖">
+                </div>
+                <div class="bread-info">
+                    <h2>● 蘇打餅牛軋糖</h2>
+                    <span class="tag">台灣伴手禮</span>
+                    <span class="tag">奶香濃郁</span>
+                    <span class="tag">送禮首選</span>
+                    <p>
+                        結合鹹香蘇打餅與軟Q奶香牛軋糖的經典台灣伴手禮，
+                        一口咬下同時享受餅乾的酥脆與牛軋糖的綿密，
+                        鹹甜交融的獨特風味令人難忘。
+                    </p>
+                    <p>
+                        <!-- TODO：可補充口味種類、禮盒包裝說明等 -->
+                        目前提供原味、草莓、抹茶三種口味。
+                    </p>
+                    <table class="bread-spec">
+                        <tr>
+                            <th>口感</th>
+                            <td>外脆內軟、鹹甜交融</td>
+                        </tr>
+                        <tr>
+                            <th>保存方式</th>
+                            <td>常溫密封 14 天</td>
+                        </tr>
+                        <tr>
+                            <th>建議食用</th>
+                            <td>常溫直接食用</td>
+                        </tr>
+                        <tr>
+                            <th>價格</th>
+                            <td><!-- TODO：填入價格 --></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== 麵包 3：小餐包 ===== -->
+            <div class="bread-detail" id="detail-dinner-roll">
+                <div class="bread-img">
+                    <img src="./images/餐包1.jpg" alt="小餐包">
+                </div>
+                <div class="bread-info">
+                    <h2>● 小餐包</h2>
+                    <span class="tag">早午餐</span>
+                    <span class="tag">鬆軟</span>
+                    <span class="tag">百搭</span>
+                    <p>
+                        經典的輕食選擇，以口感鬆軟、尺寸精緻著稱，
+                        適合做為早午餐或餐前麵包，
+                        建議冷凍保存，加熱後食用風味最佳。
+                    </p>
+                    <p>
+                        <!-- TODO：可補充搭配建議、適合族群等 -->
+                        可搭配奶油、果醬或作為漢堡包使用，非常百搭。
+                    </p>
+                    <table class="bread-spec">
+                        <tr>
+                            <th>口感</th>
+                            <td>鬆軟綿密</td>
+                        </tr>
+                        <tr>
+                            <th>保存方式</th>
+                            <td>冷凍 30 天</td>
+                        </tr>
+                        <tr>
+                            <th>建議食用</th>
+                            <td>加熱後食用</td>
+                        </tr>
+                        <tr>
+                            <th>價格</th>
+                            <td><!-- TODO：填入價格 --></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 預訂按鈕 -->
+            <div style="text-align: center; margin-top: 40px;">
+                <h3>喜歡我們的麵包嗎？</h3>
+                <a href="booking.html" class="back-btn" style="font-size:1em; padding: 12px 30px;">立即預訂 →</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER（與 index 相同） ===== -->
+    <footer>
+        <p><small>Copyright © Yozi's Web All Rights Reserved</small></p>
+    </footer>
+
+</body>
+
+</html>

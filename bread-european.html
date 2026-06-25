@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歐式麵包 | Yozi's Web</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 8px 20px;
+            background-color: #fff;
+            border: 2px solid #f7c7a3;
+            border-radius: 20px;
+            color: #8b5e3c;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-btn:hover { background-color: #f5e6c8; }
+
+        .bread-hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .bread-hero img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+        }
+        .bread-hero h2 {
+            font-size: 1.8em;
+            color: #8b5e3c;
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #f5e6c8;
+            color: #8b5e3c;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 4px;
+        }
+
+        .bread-spec {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .bread-spec th, .bread-spec td {
+            border: 1px solid #ddd;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .bread-spec th {
+            background-color: #f5e6c8;
+            width: 120px;
+        }
+
+        .order-btn {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .order-btn a {
+            padding: 12px 36px;
+            background-color: #f7c7a3;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .order-btn a:hover { background-color: #e0a87e; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yozi's Web</h1>
+        <p>介紹一下我們的麵包種類！</p>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#about">關於本站</a></li>
+            <li><a href="#bread-types">麵包種類</a></li>
+            <li><a href="#profile">烘焙師介紹</a></li>
+            <li><a href="#booking.html">立即預定</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content">
+
+            <a href="index-20260416.html#bread-types" class="back-btn">← 返回麵包種類</a>
+
+            <!-- 主圖 + 標題 -->
+            <div class="bread-hero">
+                <img src="./images/歐式麵包.jpg" alt="歐式麵包" >
+                <h2>● 歐式麵包</h2>
+                <div>
+                    <span class="tag">低糖</span>
+                    <span class="tag">低油</span>
+                    <span class="tag">健康首選</span>
+                </div>
+            </div>
+
+            <!-- 詳細介紹 -->
+            <section>
+                <h3>介紹</h3>
+                <p>
+                    歐式麵包是一種源自歐洲、以主食為定位的麵包，
+                    通常特點是低糖、低油、少蛋或無蛋，適合健康飲食的人食用。
+                    外皮酥脆、內裡Q彈，是正餐的好搭檔。
+                </p>
+                <p>
+                    <!-- TODO：可在這裡補充更多內容 -->
+                    製作過程採用長時間低溫發酵，讓麵包風味更加豐富層次。
+                </p>
+            </section>
+
+            <!-- 規格表 -->
+            <section>
+                <h3>商品規格</h3>
+                <table class="bread-spec">
+                    <tr><th>口感</th><td>外酥內Q</td></tr>
+                    <tr><th>保存方式</th><td>常溫 2 天 / 冷凍 7 天</td></tr>
+                    <tr><th>建議食用</th><td>回烤 5 分鐘風味最佳</td></tr>
+                    <tr><th>價格</th><td><!-- TODO --></td></tr>
+                </table>
+            </section>
+
+            <!-- 預訂按鈕 -->
+            <div class="order-btn">
+                <a href="table-20260423.html" target="_blank">立即預訂 →</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p><small>Copyright © Yozi's Web All Rights Reserved</small></p>
+    </footer>
+
+</body>
+</html>
