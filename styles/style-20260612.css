@@ -2,6 +2,7 @@
 @font-face {
   font-family: Pixelify Sans;
   src: url(./PixelifySans-VariableFont_wght.ttf);
+  font-display: swap;
 }
 /* 變數 */
 /*混合參數*/
@@ -36,7 +37,9 @@ body nav {
   text-align: center;
 }
 body nav ul.menu {
-  margin-left: -2.5em;
+  /* margin-left: -2.5em; */
+  margin: 0;
+  padding: 0;
 }
 body nav ul.menu li {
   list-style-type: none;
@@ -54,7 +57,8 @@ body nav ul.menu li a {
 }
 body .content {
   background-color: white;
-  width: 960px;
+  /* width: 960px; */
+  width: 100%;
   border: 1px solid #f7c7a3;
   margin: 30px auto;
   padding: 40px 80px;
@@ -93,6 +97,7 @@ body .content .clearfix::after {
   content: "";
   clear: both;
   display: block;
+  box-sizing: border-box;
 }
 body .content .more {
   text-align: right;
@@ -162,7 +167,7 @@ body .content .btns input:hover {
 body a {
   color: red;
 }
-body a[href^="mailto://"]::after {
+body a[href^="mailto:"]::after {
   content: url(../images/ico_mail.png);
   margin-left: 5px;
   vertical-align: middle;
